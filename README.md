@@ -22,5 +22,5 @@ To prevent the collision with the classes contained in the standard JDK / JRE so
 
 ## User Keytool `srcprovidername`
 
-    java -jar keytool.jar -importcert -alias ci -file CERT_CI_ECDSA_BRP.der -keystore truststore.jks -srcprovidername BC -providerPath bcprov-jdk15on-1.59.jar -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider
+    java -jar keytool.jar -importcert -alias ci -file CERT_CI_ECDSA_BRP.der -keystore truststore.bks -srcprovidername BC -deststoretype BKS -destprovidername BC -providerPath bcprov-jdk15on-1.59.jar -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider
     

@@ -54,7 +54,7 @@
                 </executions>
                 <configuration>
                     <mainClass>sun.security.tools.keytool.Main2</mainClass>
-                    <commandlineArgs>-importcert -alias ci -file "${project.basedir}\cert\CERT_CI_ECDSA_BRP.der" -keystore "${project.build.directory}\truststore.jks" -srcprovidername BC -providerPath "${user.home}\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.59\bcprov-jdk15on-1.59.jar" -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider</commandlineArgs>
+                    <commandlineArgs>-importcert -alias ci -file "${project.basedir}\cert\CERT_CI_ECDSA_BRP.der" -keystore "${project.build.directory}\truststore.bks" -srcprovidername BC -deststoretype BKS -destprovidername BC -providerPath "${user.home}\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.59\bcprov-jdk15on-1.59.jar" -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider</commandlineArgs>
                 </configuration>
             </plugin>
             <plugin>
