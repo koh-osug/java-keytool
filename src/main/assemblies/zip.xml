@@ -26,6 +26,7 @@
             <outputDirectory>/</outputDirectory>
             <includes>
                 <include>CERT_CI_ECDSA_BRP.der</include>
+                <include>CERT_CI_ECDSA_NIST.der</include>
             </includes>
         </fileSet>
         <fileSet>
