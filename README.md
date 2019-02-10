@@ -14,13 +14,13 @@ To run the sample certificate import into a trust store run:
 
 Choose any password.
      
-Before running a the sample again, run `mvn clean install` again to delete the `truststore.jks` file.  
+Before running the sample again, run `mvn clean install` again to delete the `truststore.jks` file.  
 
 ## Developer Notes
 
 To prevent the collision with the classes contained in the standard JDK / JRE some classes were renamed: Foo -> Foo2.
 
-## User Keytool `srcprovidername`
+## Use Keytool Option `srcprovidername`
 
     java -jar keytool.jar -importcert -alias ci -file CERT_CI_ECDSA_BRP.der -keystore truststore.bks -srcprovidername BC -deststoretype BKS -destprovidername BC -providerPath bcprov-jdk15on-1.59.jar -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider
     
