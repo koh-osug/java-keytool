@@ -18,7 +18,7 @@ Before running the sample again, run `mvn clean install` again to delete the `tr
 
 ## Developer Notes
 
-To prevent the collision with the classes contained in the standard JDK / JRE some classes were renamed: Foo -> Foo2.
+To prevent the collision with the classes contained in the standard JDK / JRE some classes were renamed: `<className>` -> `<className>2`.
 
 ## Use Keytool Option `srcprovidername`
 

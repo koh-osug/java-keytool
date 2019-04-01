@@ -20,10 +20,16 @@
     </properties>
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>org.bouncycastle</groupId>-->
+            <!--<artifactId>bcprov-jdk15on</artifactId>-->
+            <!--<version>1.61</version>-->
+        <!--</dependency>-->
+        <!--for debugging-->
         <dependency>
             <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.59</version>
+            <artifactId>bcprov-debug-jdk15on</artifactId>
+            <version>1.61</version>
         </dependency>
     </dependencies>
     <build>
@@ -45,16 +51,9 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <mainClass>sun.security.tools.keytool.Main2</mainClass>
-                    <commandlineArgs>-importcert -alias ci -file "${project.basedir}\cert\CERT_CI_ECDSA_BRP.der" -keystore "${project.build.directory}\truststore.bks" -srcprovidername BC -deststoretype BKS -destprovidername BC -providerPath "${user.home}\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.59\bcprov-jdk15on-1.59.jar" -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider</commandlineArgs>
+                    <commandlineArgs>-importcert -alias ci -file "${project.basedir}\cert\CERT_CI_ECDSA_BRP.der" -keystore "${project.build.directory}\truststore.bks" -srcprovidername BC -deststoretype BKS -destprovidername BC -providerPath "${user.home}\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.61\bcprov-jdk15on-1.61.jar" -v -providerClass org.bouncycastle.jce.provider.BouncyCastleProvider</commandlineArgs>
                 </configuration>
             </plugin>
             <plugin>
