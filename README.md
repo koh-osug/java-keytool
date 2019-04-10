@@ -10,7 +10,7 @@ The original keytool is always using the Sun default crypto provider which canno
 ```
     <groupId>de.ohmesoftware</groupId>
     <artifactId>keytool</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.2</version>
 
 ```
 # Build
