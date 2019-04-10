@@ -6,7 +6,7 @@
 
     <groupId>de.ohmesoftware</groupId>
     <artifactId>keytool</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <modelVersion>4.0.0</modelVersion>
     <name>Java Keytool</name>
 
@@ -200,7 +200,7 @@
         <connection>scm:git:git://github.com/koh-osug/java-keytool.git</connection>
         <developerConnection>scm:git:ssh://github.com/koh-osug/java-keytool.git</developerConnection>
         <url>https://github.com/kaoh/koh-osug/java-keytool/tree/master</url>
-      <tag>HEAD</tag>
+      <tag>keytool-0.0.2</tag>
   </scm>
 
 </project>
