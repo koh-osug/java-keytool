@@ -91,8 +91,8 @@ import static sun.security.tools.keytool.Main2.Option.*;
  *
  *
  * @see java.security.KeyStore
- * @see sun.security.provider.KeyProtector
- * @see sun.security.provider.JavaKeyStore
+ * //@see sun.security.provider.KeyProtector
+ * //@see sun.security.provider.JavaKeyStore
  *
  * @since 1.2
  */
@@ -2109,6 +2109,8 @@ public final class Main2 {
      * Loads CRLs from a source. This method is also called in JarSigner.
      * @param src the source, which means System.in if null, or a URI,
      *        or a bare file path name
+     * @return The CRL collection.
+     * @throws Exception in case of an error.
      */
     public static Collection<? extends CRL> loadCRLs(String src) throws Exception {
         InputStream in = null;
@@ -2170,6 +2172,9 @@ public final class Main2 {
     /**
      * Returns CRLs described in a X509Certificate's CRLDistributionPoints
      * Extension. Only those containing a general name of type URI are read.
+     * @param cert The X.509 certificate.
+     * @return The CRL list.
+     * @throws Exception in case of an error.
      */
     public static List<CRL> readCRLsFromCert(X509Certificate cert)
             throws Exception {

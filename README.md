@@ -4,6 +4,15 @@ This is a patched keytool version supporting to import a certificate using a pro
    
 The original keytool is always using the Sun default crypto provider which cannot import e.g. Brainpool elliptic curve certificates.
 
+# Maven Dependency
+
+
+```
+    <groupId>de.ohmesoftware</groupId>
+    <artifactId>keytool</artifactId>
+    <version>0.0.3</version>
+
+```
 # Build
 
     mvn clean install

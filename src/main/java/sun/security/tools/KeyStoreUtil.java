@@ -61,6 +61,8 @@ public class KeyStoreUtil {
     /**
      * Returns true if KeyStore has a password. This is true except for
      * MSCAPI KeyStores
+     * @param storetype The key store type.
+     * @return if this is a Windows keystore.
      */
     public static boolean isWindowsKeyStore(String storetype) {
         return storetype.equalsIgnoreCase("Windows-MY")
@@ -69,6 +71,8 @@ public class KeyStoreUtil {
 
     /**
      * Returns standard-looking names for storetype
+     * @param storetype The key store type.
+     * @return the nice name.
      */
     public static String niceStoreTypeName(String storetype) {
         if (storetype.equalsIgnoreCase("Windows-MY")) {
@@ -82,6 +86,8 @@ public class KeyStoreUtil {
 
     /**
      * Returns the keystore with the configured CA certificates.
+     * @return The CA key store.
+     * @throws Exception in case of an error.
      */
     public static KeyStore getCacertsKeyStore()
         throws Exception
@@ -101,6 +107,13 @@ public class KeyStoreUtil {
         return caks;
     }
 
+    /**
+     * Retrieves a password from a different source.
+     * @param modifier The source: "env" or "file".
+     * @param arg The source argument.
+     * @param rb the resource bundle.
+     * @return the password.
+     */
     public static char[] getPassWithModifier(String modifier, String arg,
                                              java.util.ResourceBundle rb) {
         if (modifier == null) {

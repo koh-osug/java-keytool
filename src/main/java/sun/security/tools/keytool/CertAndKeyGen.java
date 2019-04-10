@@ -111,6 +111,7 @@ public final class CertAndKeyGen {
      * to get a reproducible sequence of keys and signatures, or
      * because you may be able to take advantage of strong sources
      * of randomness/entropy in your environment.
+     * @param generator The random generator.
      */
     public void         setRandom (SecureRandom generator)
     {
@@ -173,6 +174,7 @@ public final class CertAndKeyGen {
      * generated key pair, regardless of whether or not it is an instance of
      * <code>X509Key</code>. Accordingly, the return type of this method
      * should be <code>PublicKey</code>.
+     * @return The public key.
      */
     public X509Key getPublicKey()
     {
@@ -188,6 +190,7 @@ public final class CertAndKeyGen {
      *
      * The publicKey is not necessarily to be an instance of
      * X509Key in some JCA/JCE providers, for example SunPKCS11.
+     * @return the public key.
      */
     public PublicKey getPublicKeyAnyway() {
         return publicKey;
@@ -200,6 +203,7 @@ public final class CertAndKeyGen {
      * When private keys are not kept secret, they lose their ability
      * to securely authenticate specific entities ... that is a huge
      * security risk!</em></STRONG>
+     * @return the private key.
      */
     public PrivateKey getPrivateKey ()
     {
@@ -219,6 +223,7 @@ public final class CertAndKeyGen {
      * @param myname X.500 name of the subject (who is also the issuer)
      * @param firstDate the issue time of the certificate
      * @param validity how long the certificate should be valid, in seconds
+     * @return the X.509 certificate.
      * @exception CertificateException on certificate handling errors.
      * @exception InvalidKeyException on key handling errors.
      * @exception SignatureException on signature handling errors.
@@ -294,6 +299,7 @@ public final class CertAndKeyGen {
      * X.509 public key certificates.
      *
      * @param myname X.500 name of the subject
+     * @return the CSR.
      * @exception InvalidKeyException on key handling errors.
      * @exception SignatureException on signature handling errors.
      */
